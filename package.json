@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "clean": "cross-env ./node_modules/.bin/rimraf dist",
-    "prebuild": "rm -rf node_modules package-lock.json && npm install",
+    "prebuild-railway": "rm -rf node_modules package-lock.json && npm install",
     "build-railway":"medusa migrations run && medusa start",
     "build": "cross-env npm run clean && npm run build:server && npm run build:admin",
     "build:server": "cross-env npm run clean && tsc -p tsconfig.server.json",
