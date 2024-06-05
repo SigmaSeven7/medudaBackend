@@ -1,6 +1,6 @@
 
 import { Request, Response } from 'express';
-import {headers} from "../../../utils/index"
+import generateHeaders from '../../../utils/index';
 import axios from 'axios';
 
 
@@ -8,8 +8,10 @@ import axios from 'axios';
 
 export const POST = async (req: Request, res: Response) => {
     try {
+        const headers = generateHeaders();
         console.log("req.body", req.body);
         console.log("headers", headers);
+  
         // Make the external API request
         const response = await axios.post('https://api.tranzila.com/v1/transaction/credit_card/create', req.body, {
             headers: headers
