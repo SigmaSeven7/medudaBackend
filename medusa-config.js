@@ -245,8 +245,7 @@ const projectConfig = {
     saveUninitialized: true,
     ttl: 1 * 24 * 60 * 60 * 1000
   },
-  // Uncomment the following lines to enable REDIS
-  // redis_url: REDIS_URL
+  redis_url: REDIS_URL
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule} */
