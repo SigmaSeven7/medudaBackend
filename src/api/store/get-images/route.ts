@@ -3,6 +3,7 @@ import fetch from 'node-fetch';
 
 
 export const POST = async (req: MedusaRequest, res: MedusaResponse) => {
+  //@ts-ignore:next-line
   const { imageId } = JSON.parse(req.body); // Parsing the JSON body
   
 

@@ -1,6 +1,11 @@
 import type { MedusaRequest, MedusaResponse } from "@medusajs/medusa";
 
-export const POST = async (req: MedusaRequest, res: MedusaResponse) => {
+interface RequestBody {
+  attribute_id: string;
+  // Add other properties if needed
+}
+
+export const POST = async (req: MedusaRequest<RequestBody>, res: MedusaResponse) => {
   const productService = req.scope.resolve("productService");
   const { attribute_id } = req.body
   const selector = {

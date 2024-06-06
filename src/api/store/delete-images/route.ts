@@ -2,7 +2,7 @@ import { MedusaRequest, MedusaResponse } from "@medusajs/medusa";
 import fetch from 'node-fetch';
 
 
-export const DELETE = async (req: MedusaRequest, res: MedusaResponse) => {
+export const DELETE = async (req: MedusaRequest<{ imageId: string }>, res: MedusaResponse) => {
   const { imageId } = req.body;  // Extracting imageId from the request body
 
   const options = {

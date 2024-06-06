@@ -18,7 +18,7 @@ const verifyRecaptcha = async (token:string) => {
 
 export const POST = async (req: MedusaRequest, res: MedusaResponse) => {
   try {
-    const token = req.body.gRecaptchaToken;
+    const token = (req.body as { gRecaptchaToken: string }).gRecaptchaToken;
  
      // Recaptcha response
      const response = await verifyRecaptcha(token);
