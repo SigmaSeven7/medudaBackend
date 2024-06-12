@@ -67,6 +67,7 @@ const plugins = [
         process.env.SENDGRID_ORDER_PLACED_ID,
         user_password_reset_template:process.env.SENDGRID_USER_PASSWORD_RESET_ID,
         customer_password_reset_template:process.env.SENDGRID_CUSTOMER_PASSWORD_RESET_ID,
+        gift_card_created_template: process.env.SENDGRID_GIFT_CARD_CREATED_ID,
     },
   },
   {
