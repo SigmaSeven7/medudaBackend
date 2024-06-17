@@ -161,6 +161,7 @@ const plugins = [
                 "thumbnail",
                 "subtitle",
                 "tags",
+                "is_giftcard",
                 "material",
                 "variants",
                 "variant_sku",
@@ -185,6 +186,7 @@ const plugins = [
                 thumbnail: item.thumbnail,
                 subtitle: item.subtitle,
                 tags: item.tags,
+                is_giftcard: item.is_giftcard,
                 description: item.description,
                 material: item.material,
                 metadata: item.metadata, // Keep the original metadata as well if needed
