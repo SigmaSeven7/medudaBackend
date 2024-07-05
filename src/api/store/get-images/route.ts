@@ -17,7 +17,7 @@ export const POST = async (req: MedusaRequest, res: MedusaResponse) => {
 
   try {
     const response = await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_ID}/images/v1/${imageId}`, options);
-    const data = await response.json();
+    const data: any = await response.json();
     // Check if the success property in the response is true
     if (data.success) {
       res.json({ success: true });  // HTTP 200 with success true
